@@ -18,12 +18,14 @@ public class TestScript : MonoBehaviour,IinteractableOptions {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         activate = false;
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
 
         if (activate)
         {

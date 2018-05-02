@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IinteractableOptions {
+/// <summary>
+/// Attach interface to objects that are interactable
+/// </summary>
+public interface IinteractableOptions
+{
 
     void DisplayInteractOptions();
 	

@@ -12,7 +12,7 @@ public class PlayerInteraction : MonoBehaviour
 {
 
     private Rigidbody Rbody;
-    [Tooltip("recommend value of 3.0f,Changes the distance of Player RayCasts")]
+    [Tooltip("recommended value of 3.0f,Changes the distance of Player RayCasts")]
     [SerializeField] private float RaycastMaxDistance;
     [Tooltip("Empty GameObject which is made a child of the player, add component 'PlayerInteractionChild'")]
     [SerializeField] private GameObject Child;// Empty GameObject, should be child of the Player Object
@@ -42,7 +42,6 @@ public class PlayerInteraction : MonoBehaviour
             // finds object( Which should be an Empty Gameobject and Child of the player)
         }
 
-
         Hits = new GameObject[5];
         Rbody = GetComponent<Rigidbody>();
         ChildTransform = Child.transform;
@@ -58,7 +57,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Hits.Length > 0)// array size larger than zero
          {
-           Array.Clear(Hits, 0, Hits.Length);// empties the arra
+           Array.Clear(Hits, 0, Hits.Length);// empties the array
          }
         // These next five lines are strictly for being able to see the rays inside the editor scene
         Debug.DrawRay(this.transform.position,  GetHorizontalVectorDirection(), Color.cyan);
@@ -100,7 +99,7 @@ public class PlayerInteraction : MonoBehaviour
 
     }
     /// <summary> DisplayClosestObjectOptions():
-    /// Called in Casting()
+    /// Called in PyramidRayCastingForInteractables()
     /// Uses the first object in the array to determine the object closest to the player
     /// </summary>
     private void DisplayClosestObjectOptions()
